@@ -3,7 +3,6 @@
 # For each game, Emma will get an array of clouds numbered  if they are safe or  if they must be avoided. For example,  indexed from . The number on each cloud is its index in the list so she must avoid the clouds at indexes  and . She could follow the following two paths:  or . The first path takes  jumps while the second takes .
 
 # Function Description
-
 # Complete the jumpingOnClouds function in the editor below. It should return the minimum number of jumps required, as an integer.
 
 # jumpingOnClouds has the following parameter(s):
@@ -40,23 +39,8 @@ def jumpingOnClouds(c):
     if c[2] == 0:
         return 1 + jumpingOnClouds(c[2:])
 
-    # jumps = 0
-
-    # index = 0
-    # skips = 0
-
-    # while index < len(c)-1:
-    #     print('index', index)
-    #     for j in range(index + 1, len(c)):
-    #         if(c[j] == 1):
-    #             jumps = jumps + 2
-    #             break
-    #         else:
-    #             skips = skips + 1
-    #     print('skips', skips)
-    #     index = index + skips + 2
-
-    # print('jumps:', jumps)
-
 
 print(jumpingOnClouds([0, 0, 0, 0, 1, 0]))
+
+array = [0, 0, 0, 0, 1, 0]
+print(array[1:])
