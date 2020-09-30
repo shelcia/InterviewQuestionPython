@@ -25,8 +25,11 @@ def diagonalDifference(arr):
         for j in range(0, len(arr)):
             if(i == j):
                 leftDiagonalSum = leftDiagonalSum + arr[i][j]
-            elif(i+j == (len(arr) - 1)):
+            if(i+j == (len(arr) - 1)):
+                print(arr[i][j])
                 rightDiagonalSum = rightDiagonalSum + arr[i][j]
+
+    print(leftDiagonalSum, rightDiagonalSum)
 
     differnce = abs(leftDiagonalSum - rightDiagonalSum)
 
@@ -36,21 +39,29 @@ def diagonalDifference(arr):
 if __name__ == '__main__':
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input("Enter the number of rows:"))
+    # n = int(input("Enter the number of rows:"))
 
     # Initialize matrix
     matrix = []
-    print("Enter the entries rowwise:")
+    # print("Enter the entries rowwise:")
 
     # For user input
-    for i in range(n):          # A for loop for row entries
-        a = []
-        for j in range(n):      # A for loop for column entries
-            a.append(int(input()))
-        matrix.append(a)
+    # for i in range(n):          # A for loop for row entries
+    #     a = []
+    #     for j in range(n):      # A for loop for column entries
+    #         a.append(int(input()))
+    #     matrix.append(a)
 
-    print(diagonalDifference(matrix))
+    # print(matrix)
+
+    matrix5 = [[11, 2, 4], [4, 5, 6], [10, 8, -12]]
+
+    print('answer', diagonalDifference(matrix5))
 
     # fptr.write(str(result) + '\n')
 
     # fptr.close()
+
+# 11 2 4
+# 4 5 6
+# 10 8 -12
