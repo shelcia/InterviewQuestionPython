@@ -1,3 +1,3 @@
-# python-programs
+# Python Interview Questions
 
-consists of most of interview based python programs
+Consisting most of the interview based python programs.
