@@ -35,3 +35,6 @@ if __name__ == '__main__':
 
     printList = linkedList()  # CREATE INSTANCE
     printList.printList(node1)  # CALL THE FUNCTION
+
+
+# 2 ->11 ->1999 ->None
