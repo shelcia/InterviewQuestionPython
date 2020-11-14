@@ -36,6 +36,7 @@ class linkedList:
 
         currentNode = self.head
         self.head = currentNode.nextNode
+        currentNode = None
 
     def delAtEnd(self):
         if(self.head is None):
@@ -48,8 +49,9 @@ class linkedList:
             prevNode = currentNode
             currentNode = currentNode.nextNode
         prevNode.nextNode = None
+        currentNode = None
 
-    def delAtPos(self, value):
+    def delForValue(self, value):
 
         currentNode = self.head
         while currentNode.value is not value:
@@ -59,6 +61,7 @@ class linkedList:
             currentNode = currentNode.nextNode
 
         prevNode.nextNode = currentNode.nextNode
+        currentNode = None
 
 
 if __name__ == "__main__":
@@ -78,7 +81,7 @@ if __name__ == "__main__":
     node.printList()
     node.delAtEnd()
     node.printList()
-    node.delAtPos("7")
+    node.delForValue("7")
     node.printList()
 
 
