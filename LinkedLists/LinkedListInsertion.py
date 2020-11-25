@@ -46,6 +46,7 @@ class linkedList:
             return
 
         currentNode = self.head
+        prevNode = self.head
         while currentNode.value is not prev_value:
             if(currentNode.nextNode is None):
                 print("Node not found")
