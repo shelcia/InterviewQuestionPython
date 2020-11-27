@@ -43,6 +43,7 @@ class linkedList:
             print("Linked List is Empty")
 
         currentNode = self.head
+        prevNode = self.head
         while True:
             if(currentNode.nextNode is None):
                 break
@@ -54,6 +55,7 @@ class linkedList:
     def delForValue(self, value):
 
         currentNode = self.head
+        prevNode = self.head
         while currentNode.value is not value:
             if(currentNode is None):
                 print("There is not value existing !!")
