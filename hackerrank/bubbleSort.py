@@ -82,12 +82,13 @@
 def countSwaps(a):
 
     count = 0
+    # print(len(a))
     for idx in range(0, len(a)):
-        for sidx in range(1, len(a)-idx):
-            if (a[idx] < a[sidx]):
-                a[idx], a[sidx] = a[sidx], a[idx]
+        for sidx in range(0, len(a)-idx-1):
+            if (a[sidx] > a[sidx + 1]):
+                a[sidx], a[sidx + 1] = a[sidx + 1], a[sidx]
             count = count + 1
-        print('Iteration', idx, a)
+        # print('Iteration', idx, a)
     print(count)
 
 
