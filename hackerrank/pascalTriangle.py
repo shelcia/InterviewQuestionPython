@@ -24,15 +24,14 @@ def printPascal(n):
         # integers equal to line
         # number
         for i in range(0, line + 1):
-            print(binomialCoefficient(line, i),
+            print('[', line, i, ']', binomialCoefficient(line, i),
                   " ", end="")
         print()
-# k = 2
-# res = binomialCoefficient(n, k)
-# print("Value of C(% d, % d) is % d" % (n, k, res))
+    # k = 2
+    # res = binomialCoefficient(n, k)
+    # print("Value of C(% d, % d) is % d" % (n, k, res))
+
 
 # Driver program to test above function
-
-
 if __name__ == "__main__":
     printPascal(8)
