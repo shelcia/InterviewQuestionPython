@@ -99,3 +99,26 @@ if __name__ == '__main__':
 
     # countSwaps(a)
     countSwaps([3, 2, 1])
+
+
+# arr = list(map(int, input().split(' ')))
+# n = len(arr)
+
+# if(n == 0):
+#   print(-1, end="")
+
+# sum = 0
+# for i in range(0, len(arr)):
+#   sum = sum + arr[i]
+
+# avg = sum/n
+
+# if(sum % n != 0):
+#   print(-1, end="")
+# else:
+#   count = 0
+
+#   for i in range(0,n):
+#     if(avg < arr[i]):
+#       count = count + arr[i] - avg
+#   print(int(count), end="")
