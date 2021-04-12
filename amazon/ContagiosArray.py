@@ -5,29 +5,21 @@ def findContagious(arr):
     start_ptr = 0
     final_ptr = 1
     current_sum = arr[0]
+    start = 0
     print('arr', arr)
-    i = 1
-    while (i < len(arr)):
+    for i in range(1, len(arr)):
         current_sum = current_sum + arr[i]
         if(current_sum > max_sum):
-            print('sums', current_sum, max_sum, start_ptr, final_ptr)
             max_sum = current_sum
-            final_ptr = i + 1
-        else:
-            start_ptr = i
+            start_ptr = start
             final_ptr = i
-        i = i + 1
-    # for i in range(1, len(arr)):
-    #     current_sum = current_sum + arr[i]
-    #     if(current_sum > max_sum):
-    #         max_sum = current_sum
-    #         final_ptr = i + 1
-    #     else:
-    #         start_ptr = i
-    #         final_ptr = i
 
-    print('max sum', max_sum)
-    print(arr[start_ptr: final_ptr])
+        if current_sum < 0:
+            current_sum = 0
+            start_ptr = i + 1
+
+    print('Maximum Sum:', max_sum)
+    print('Contagious Array', arr[start_ptr: final_ptr + 1])
 
 
 if __name__ == '__main__':
